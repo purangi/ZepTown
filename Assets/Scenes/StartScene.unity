@@ -1032,6 +1032,7 @@ GameObject:
   - component: {fileID: 1010570148}
   - component: {fileID: 1010570147}
   - component: {fileID: 1010570149}
+  - component: {fileID: 1010570150}
   m_Layer: 5
   m_Name: Press
   m_TagString: Untagged
@@ -1177,6 +1178,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1010570150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010570145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 966200001a0ab3349a1c886ceae644e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1334980831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,7 +1656,7 @@ GameObject:
   - component: {fileID: 1703630878}
   - component: {fileID: 1703630877}
   m_Layer: 0
-  m_Name: wallpaperflare.com_wallpaper
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
