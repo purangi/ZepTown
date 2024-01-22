@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer characterRenderer;
+    private GameObject _character;
     private PlayerCharacterController _controller;
 
     private Vector2 _movementDirection = Vector2.zero;
@@ -41,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FlipCharacter(Vector2 direction)
     {
+        _character = GetComponent<Player>().character;
+        SpriteRenderer characterRenderer = _character.transform.GetComponent<SpriteRenderer>();
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         characterRenderer.flipX = Mathf.Abs(rotZ) > 90f;
     }
