@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -20,6 +21,15 @@ public class Player : MonoBehaviour
     {
         character = characters[GameManager.I.characterNum];
         OffCharacters();
+    }
+
+    public void SetName(TMP_InputField nameInput)
+    {
+        if (!(nameInput.text.Length > 1 && nameInput.text.Length < 6)) return;
+
+        GameManager.I.name = nameInput.text;
+        nameInput.text = "";
+        ShowName();
     }
 
     private void OffCharacters()

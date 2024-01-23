@@ -12,7 +12,7 @@ public class CharacterCreate : MonoBehaviour
 
     private bool EnterName()
     {
-        if (!(nameInput.text.Length > 2 && nameInput.text.Length < 10)) return false;
+        if (!(nameInput.text.Length > 1 && nameInput.text.Length < 6)) return false;
 
         GameManager.I.name = nameInput.text;
         return true;
