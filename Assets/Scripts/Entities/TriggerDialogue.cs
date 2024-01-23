@@ -12,7 +12,11 @@ public class TriggerDialogue : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("stay");
+        //Debug.Log("stay");
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("E");
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
