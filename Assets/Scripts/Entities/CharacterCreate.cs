@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class CharacterCreate : MonoBehaviour
 {
     [SerializeField] TMP_InputField nameInput;
+    [SerializeField] AudioClip dungeonBgm;
     public bool isCharacterSelected = false;
 
     private bool EnterName()
@@ -19,6 +20,10 @@ public class CharacterCreate : MonoBehaviour
 
     public void EnterDungeon()
     {
-        if (EnterName() && isCharacterSelected) SceneManager.LoadScene("MainScene");
+        if (EnterName() && isCharacterSelected)
+        {
+            SceneManager.LoadScene("MainScene");
+            SoundManager.ChangeBackGroundMusic(dungeonBgm);
+        }
     }
 }
