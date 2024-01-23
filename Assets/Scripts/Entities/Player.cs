@@ -12,9 +12,14 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        SetCharacter();
+        ShowName();
+    }
+
+    public void SetCharacter()
+    {
         character = characters[GameManager.I.characterNum];
         OffCharacters();
-        ShowName();
     }
 
     private void OffCharacters()

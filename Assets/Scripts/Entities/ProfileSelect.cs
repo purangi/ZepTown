@@ -13,19 +13,32 @@ public class ProfileSelect : MonoBehaviour
     [SerializeField] private Sprite[] profiles;
 
     [SerializeField] private CharacterCreate _cc;
+    //[SerializeField] private Player _player;
     public void InputProfile()
     {
+        SetCharacterNum();
+        profile.sprite = profiles[GameManager.I.characterNum];
+        _cc.isCharacterSelected = true;
+    }
+
+    public void changeCharacter(Player _player)
+    {
+        SetCharacterNum();
+        _player.SetCharacter();
+    }
+
+    public void SetCharacterNum()
+    {
         int num;
-        if(dwarf_elf.isOn)
+        if (dwarf_elf.isOn)
         {
             num = dwarf_fm.isOn ? 0 : 1;
-        } else
+        }
+        else
         {
             num = elf_fm.isOn ? 2 : 3;
         }
 
-        profile.sprite = profiles[num];
         GameManager.I.characterNum = num;
-        _cc.isCharacterSelected = true;
     }
 }
